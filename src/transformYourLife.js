@@ -13,11 +13,21 @@ var loop = function(collection, callback){
 
 
 // 1. Build transform.
-
+var transform = function(collection, callback){
+	var results = [];
+	loop(collection, function(element){
+		results.push(callback(element));
+	});
+	return results;
+}
 
 // 2. allNumbersMultipliedByThree
 var numbers = [1, 2, 3, 4, 5];
 
+var allNumbersMultipliedByThree = transform(numbers, function(value){
+	console.log(value * 3)
+	return value * 3;  
+});
 
 // 3. bestSentenceToUpperCase
 var bestSentence = "This is the best six week course ever!";
