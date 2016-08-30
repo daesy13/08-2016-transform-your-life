@@ -9,6 +9,11 @@ var loop = function(collection, callback){
       callback(collection[key], key);
     }
   }
+  else {
+  	for (var i = 0; i < collection.length; i++){
+  		callback(collection[i],i);
+  	}
+  }
 };
 
 
@@ -31,7 +36,13 @@ var allNumbersMultipliedByThree = transform(numbers, function(value){
 
 // 3. bestSentenceToUpperCase
 var bestSentence = "This is the best six week course ever!";
-
+var bestSentenceToUpperCase = transform(bestSentence, function(element){
+	//console.log(element.toUpperCase());
+	var answer = element.toUpperCase();
+	return answer;
+	;
+});
+console.log(bestSentenceToUpperCase.join(""));
 // 4. collectedContents
 var person = {name: 'Jon', greatestFear: 'fearItself'};
 
