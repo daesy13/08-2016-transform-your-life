@@ -41,10 +41,20 @@ var bestSentenceToUpperCase = transform(bestSentence, function(element){
 	var answer = element.toUpperCase();
 	return answer;
 	;
-});
+}).join("");
 console.log(bestSentenceToUpperCase.join(""));
+
 // 4. collectedContents
 var person = {name: 'Jon', greatestFear: 'fearItself'};
+var collectedValues = function(value, key){
+	console.log([value, key]);
+	return [value, key];
+}
+
+var collectedContents = transform(person, collectedValues){
+	
+
+}
 
 // 5. multByThree
 
