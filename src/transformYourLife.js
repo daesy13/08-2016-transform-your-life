@@ -53,7 +53,6 @@ var collectedValues = function(value, key){
 
 var collectedContents = transform(person, collectedValues){
 	
-
 }
 
 // 5. multByThree
