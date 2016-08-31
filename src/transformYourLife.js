@@ -20,8 +20,8 @@ var loop = function(collection, callback){
 // 1. Build transform.
 var transform = function(collection, callback){
 	var results = [];
-	loop(collection, function(element){
-		results.push(callback(element));
+	loop(collection, function(element, key){
+		results.push(callback(element, key ));
 	});
 	return results;
 }
@@ -42,7 +42,7 @@ var bestSentenceToUpperCase = transform(bestSentence, function(element){
 	return answer;
 	;
 }).join("");
-console.log(bestSentenceToUpperCase.join(""));
+console.log(bestSentenceToUpperCase);
 
 // 4. collectedContents
 var person = {name: 'Jon', greatestFear: 'fearItself'};
@@ -50,10 +50,8 @@ var collectedValues = function(value, key){
 	console.log([value, key]);
 	return [value, key];
 }
-
-var collectedContents = transform(person, collectedValues){
-	
-}
+var personValues = transform(person, collectedValues);
+console.log(personValues);
 
 // 5. multByThree
 
