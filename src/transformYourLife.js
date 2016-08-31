@@ -21,10 +21,10 @@ var loop = function(collection, callback){
 var transform = function(collection, callback){
 	var results = [];
 	loop(collection, function(element, key){
-		results.push(callback(element, key ));
+		results.push(callback(element, key))
 	});
 	return results;
-}
+};
 
 // 2. allNumbersMultipliedByThree
 var numbers = [1, 2, 3, 4, 5];
@@ -54,6 +54,10 @@ var personValues = transform(person, collectedValues);
 console.log(personValues);
 
 // 5. multByThree
+var multByThree = function(collection){
+return transform(numbers, allNumbersMultipliedByThree);
+}
+console.log(multByThree);
 
 // 6. upperCase
 
