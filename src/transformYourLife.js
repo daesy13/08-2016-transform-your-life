@@ -55,11 +55,23 @@ console.log(personValues);
 
 // 5. multByThree
 var multByThree = function(collection){
-return transform(numbers, allNumbersMultipliedByThree);
-}
-console.log(multByThree);
+return transform (collection, function(number) {
+	return number * 3;
+}); 
+
+};
+console.log(multByThree([6,7,8,8,4]));
+
 
 // 6. upperCase
+
+var upperCase = function (string) {
+	return transform(string, function(element){
+		return element.toUpperCase();
+	})
+.join("")
+}
+console.log(upperCase("Practice makes perfect and practice makes the end."))
 
 // 7. contentsCollection
 
