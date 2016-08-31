@@ -199,7 +199,7 @@ Example:
 
 	var person = {name: 'Jon', greatestFear: 'fearItself'};
 	var collectedContents = contentsCollection(person);
-	console.log(collectedContents); // ['name', 'Jon', 'greatestFear', 'fear itself'];
+	console.log(collectedContents); // [['name', 'Jon'], ['greatestFear', 'fear itself']];
 
 ```
 

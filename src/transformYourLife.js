@@ -74,6 +74,12 @@ var upperCase = function (string) {
 console.log(upperCase("Practice makes perfect and practice makes the end."))
 
 // 7. contentsCollection
+var contentsCollection = function(object){
+  return transform (object, function(element){
+    return collectedContents;
+  })
+}
+console.log(contentsCollection(person));
 
 // 8. multByWhatever
 
